@@ -112,3 +112,21 @@ def deposit():
             print("Please enter a number.")
 
     return amount
+
+
+# Function for declaring number of lines wanted by user and for checking
+# number of lines is between 1-3 and a number(integer)
+def get_number_of_lines():
+
+    while True:
+        lines = input("Please enter the number of lines you would like to deposit your bottlecaps on? (1-" + str(MAX_LINES) + ")\n ")
+        if lines.isdigit():
+            lines = int(lines)
+            if 1 <= lines <= MAX_LINES:
+                break
+            else:
+                print("Please enter a valid number of lines.")
+        else:
+            print("Please enter a number.")
+
+    return lines
