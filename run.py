@@ -77,3 +77,38 @@ def display_vending_machine(columns):
                 print(column[row], end="")
         
         print()
+
+# Function for Depositing funds from the user to play the game and
+# for checking deposit entered is > 0 and is a number(Integer)
+def deposit():
+    print(
+        '''
+        Welcome user are you ready to play the Bottle cap vending machine?
+        To play deposit a bottlecap to win yourself some tokens to exchange
+        for any supplies needed!!
+
+        Minimum deposit is 1 and maximum is 100, a table will display with 
+        3 lines and you Must have 3 Matching symbols horizontally to win.
+       
+        The Vending machine has 3 lines with 4 Symbols available, A B C D
+        Value A will Multiply your deposit by 5
+        Value B will Multiply your deposit by 4
+        Value C will Multiply your deposit by 3
+        Value D will Multiply your deposit by 2
+        
+        '''
+    )
+
+
+    while True:
+        amount = input("How many Bottlecaps would you like to deposit?\n")
+        if amount.isdigit():
+            amount = int(amount)
+            if amount > 0 and amount <= 100:
+                break
+            else:
+                print("Deposit must be between 1 and 100!!")
+        else:
+            print("Please enter a number.")
+
+    return amount
