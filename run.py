@@ -29,7 +29,7 @@ symbol_value = {
 
 # Function for checking the rows for a sequence of 3 of the same symbols and
 # adding the number of winning lines to a list and calculating winnings
-def check_winnings(columns, lines, bet, values):
+def check_winnings(columns, lines, funds, values):
     winnings = 0
     winning_lines = []
     for line in range(lines):
@@ -39,7 +39,7 @@ def check_winnings(columns, lines, bet, values):
             if symbol != symbol_to_check:
                 break
         else:
-            winnings += values[symbol] * bet
+            winnings += values[symbol] * funds
             winning_lines.append(line + 1)
 
 
@@ -137,10 +137,10 @@ def get_number_of_lines():
 def get_deposit():
 
     while True:
-        amount = input("How many bottlecaps do you want to deposit on each line? £\n")
+        amount = input("How many bottlecaps do you want to deposit on each line? \n")
         if amount.isdigit():
             amount = int(amount)
-            if amount <= MIN_CAP and amount <= MAX_CAP:
+            if amount >= MIN_CAP and amount <= MAX_CAP:
                 break
             else:
                 print(f"Amount must be between {MIN_CAP} - {MAX_CAP} Bottlecaps.")
@@ -157,18 +157,35 @@ def spin(balance):
     
     while True:
         funds = get_deposit()
-        total_bet = funds * lines
+        total_deposit = funds * lines
         
-        if total_bet > balance:
+        if total_deposit > balance:
             print(f"You dont have enough funds to place this deposit, Your current balance is: {balance} Bottlecaps")
         else:
             break
     
-    print(f"you are depositing {funds} bottlecaps on {lines} lines, your total deposit is equal to: {total_bet} bottlecaps")
+    print(f"you are depositing {funds} bottlecaps on {lines} lines, your total deposit is equal to: {total_deposit} bottlecaps")
 
     slot = spin_vending_machine(rows, cols, symbol_count) 
     display_vending_machine(slot)
-    winnings, winning_lines = check_winnings(slot, lines, bet, symbol_value)
+    winnings, winning_lines = check_winnings(slot, lines, funds, symbol_value)
     print(f"You won {winnings} Tokens!!.")
     print(f"you won on lines:", *winning_lines)
-    return winnings - total_bet
+    return winnings - total_deposit
+
+# Function will run while balance is more than or equal to 1,
+# If balance is less than 1 the program will terminate, The user
+# will be informed of how many tokens won and how to play again
+def main():
+    balance = deposit()
+    while balance >= 1:
+        print(f"Current balance is {balance}  Bottle caps")
+        result = input("Press enter to Play (Press q to quit) ")
+        if result == "q":
+            break
+        balance += spin(balance)
+    
+    print(f"You left with {balance} Bottle caps!")
+    print("To play again, Click run to deposit more Bottle caps!!")
+    
+main()
