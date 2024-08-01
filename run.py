@@ -3,9 +3,9 @@ import random
 # Variable for declaring maximum lines to chose from (3)
 MAX_LINES = 3
 # Variable for declaring Maximum value for a user to deposit(100)
-MAX_VALUE = 100
+MAX_CAP = 100
 # Variable for decalaring Minimum value for a user to deposit(1)
-MIN_VALUE = 1
+MIN_CAP = 1
 # Variable for number of rows in game (3)
 rows = 3
 # Variable for number of columns in game (3)
@@ -130,3 +130,21 @@ def get_number_of_lines():
             print("Please enter a number.")
 
     return lines
+
+# Function for user to input what funds they wish to deposit on lines chosen,
+# Function also checks if funds deposited is between 1-100 and checks if input is 
+# a number(Integer)
+def get_deposit():
+
+    while True:
+        amount = input("How many bottlecaps do you want to deposit on each line? £\n")
+        if amount.isdigit():
+            amount = int(amount)
+            if amount <= MIN_CAP and amount <= MAX_CAP:
+                break
+            else:
+                print(f"Amount must be between {MIN_CAP} - {MAX_CAP} Bottlecaps.")
+        else:
+            print("Please enter a number.")
+
+    return amount
