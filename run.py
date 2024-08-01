@@ -148,3 +148,27 @@ def get_deposit():
             print("Please enter a number.")
 
     return amount
+
+# Function for informing user how much they have deposited on lines requested and total deposit to play,
+# Function checks to see if users next deposit is less than or equal to users balance,
+# After the game is run,the function will display number of tokens/number of lines won
+def spin(balance):
+    lines = get_number_of_lines()
+    
+    while True:
+        funds = get_deposit()
+        total_bet = funds * lines
+        
+        if total_bet > balance:
+            print(f"You dont have enough funds to place this deposit, Your current balance is: {balance} Bottlecaps")
+        else:
+            break
+    
+    print(f"you are depositing {funds} bottlecaps on {lines} lines, your total deposit is equal to: {total_bet} bottlecaps")
+
+    slot = spin_vending_machine(rows, cols, symbol_count) 
+    display_vending_machine(slot)
+    winnings, winning_lines = check_winnings(slot, lines, bet, symbol_value)
+    print(f"You won {winnings} Tokens!!.")
+    print(f"you won on lines:", *winning_lines)
+    return winnings - total_bet
