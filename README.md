@@ -11,3 +11,115 @@ A message will then be displayed informing the user how many bottlecaps will be 
 
 [View the bottle cap vending machine game project here!](https://bottlecap-vending-machine-44921b46258e.herokuapp.com/)
 - - -
+
+
+## Logic flowchart
+![Flowchart P1](https://github.com/user-attachments/assets/5fa94e3f-93cd-4975-bdd8-28e51cb294b6)
+![Flowchart P2](https://github.com/user-attachments/assets/1065e94c-ea57-4a2f-81d9-98e3e21f00b1)
+
+## User Experience (UX)
+The vending machine game gets its roots from the famous video game franchise Fallout, the Fallout game uses the bottle cap currency due the videos games enviroment being post nuclear so bottlecaps are used in exchange for supplies, The game begins by inviting the user to play to win some tokens to exchnage for supplies, the user will deposit bottlecaps ranging from 1 - 100 bottle caps, once the user has deposited their bottlecaps the vending machine will spin and display 3 lines if there are 3 matching symbols the user deposit will multiply depending on symbol. This game will attarct alot of attention due to its similaritys with the fallout franchise and be very entertaining due to the symbols being produced are random.
+
+### User Stories
+
+* First-time visitor goals
+    * Understand how the game works. Clear instructions and what the objective of the game is.
+    * Play the game. Once the user understands the game, they will likely want to play it.
+    * Enjoy the game, the vending machine game should be challenging but fun.
+
+* Returning visitor goals
+    * Continue playing. The returning visitor may have enjoyed playing the game and wants to play again.
+    * Share with friends. Inviting friends to give the game a try.
+    * Exploring new features, if there is any.
+
+* Frequent user goals
+    * Sharing the game with others or inviting friends to play.
+    * Exploring new features, if there is any.
+
+---
+
+### Existing Features
+
+* Intro screen
+    * Displays a welcome message.
+![Intro](https://github.com/user-attachments/assets/67fb38ee-55bd-4378-af45-e8f451a9e19b)
+
+* Rules
+    * Below Welcome message the rules and instructions are displayed.
+![Rules](https://github.com/user-attachments/assets/ad4d9498-c7f0-40b2-98b5-6ace028e5c8b)
+
+* Deposit bottlecaps
+![start deposit](https://github.com/user-attachments/assets/5535827f-9caa-488b-b352-32c628960fd9)
+
+* How many lines would they like to deposit bottlecaps on.
+![Number of lines](https://github.com/user-attachments/assets/1a31fec0-2d52-41ba-9070-994f2b4c721b)
+
+* Players Bottlecap balance.
+![current Balance](https://github.com/user-attachments/assets/34154148-3c63-4245-924a-eeb0905c8b21)
+
+* How many bottle caps would they like to deposit on line or lines chosen.
+![lines deposit](https://github.com/user-attachments/assets/13b8bf2e-0887-4841-a611-ca82c6787ffd)
+
+* Click run to play game after deposit.
+![Press enter](https://github.com/user-attachments/assets/09153964-3307-4863-a5ad-a96478868cc3)
+
+* Vending machine displayed, showing lines and users deposit to play.
+![Vending Machine](https://github.com/user-attachments/assets/6d83b446-d147-4867-b048-8c287cc1c6c0)
+
+* Winning Line
+ * If line has 3 matching symbols, You won "6" tokens, you won on "1-3" lines.
+ ![Winnings](https://github.com/user-attachments/assets/023ea6c5-ec02-4f74-bf90-df8326ec0585)
+
+* No winning line
+ * If lines have no matching symbols the game will show, 
+   you won on no lines and your balance is now...
+![Loses](https://github.com/user-attachments/assets/23614e7e-4021-4a1c-a522-ed868dee244b)
+
+* Bottle caps won, balance displayed with the option to play or quit.
+![Next Game](https://github.com/user-attachments/assets/f8e71c18-c32e-497b-906d-18d7af6f320f)
+
+* Balance below 1, You left with 0 tokens please deposit
+  more bottlecaps to play.
+![End](https://github.com/user-attachments/assets/d088914e-dab6-4d66-bd62-500bd3d6af14)
+
+## Features Left to Implement
+
+* Create User Name
+* Select supplies through interface
+* Scoring system, lines won/ lines lost
+
+---
+
+## Design
+
+* Flowchart
+    * [Draw.io](http://draw.io/)
+
+---
+
+## Technologies Used
+
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+---
+
+## Frameworks, Libraries & Programs Used
+
+* [Gitpod](https://www.gitpod.io/)
+    * Used for writing code.
+* [Github](https://github.com/)
+    * Deployment of the website and storing the files online.
+* [Draw.io](http://draw.io/)
+    * To create a logic flowchart of the hangman game.
+* [Heroku](https://www.heroku.com/)
+    * To deploy the project.
+* [CI Python Linter](https://pep8ci.herokuapp.com/)
+    * Check code for any issues.
+
+## Testing 
+
+CI Python Linter was used to test run.py.
+
+<details>
+<summary> run.py CI Python Linter check
+</summary>
