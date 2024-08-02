@@ -111,15 +111,11 @@ The vending machine game gets its roots from the famous video game franchise Fal
     * Deployment of the website and storing the files online.
 * [Draw.io](http://draw.io/)
     * To create a logic flowchart of the hangman game.
-* [Heroku](https://www.heroku.com/)
+* [Heroku]()
     * To deploy the project.
-* [CI Python Linter](https://pep8ci.herokuapp.com/)
+* [CI Python Linter]()
     * Check code for any issues.
 
 ## Testing 
 
 CI Python Linter was used to test run.py.
-
-<details>
-<summary> run.py CI Python Linter check
-</summary>
