@@ -175,6 +175,19 @@ The game was manually tested extensively using gitpod terminal, and once the web
 ![End](https://github.com/user-attachments/assets/d088914e-dab6-4d66-bd62-500bd3d6af14)
 
 ## Fixed Bugs
+* When playing the game to carry out testing I came across a bug when entering my deposit  
+  of bottle caps, I could enter Twenty 1 and the program would still run.
+
+* When playing the game I only wanted integer values to be accepted, after going through my 
+  code I came across some code I had written. I was converting my deposit into a integer and not checking to see if the value was a digit.
+
+  ![Bug-pic1](https://github.com/user-attachments/assets/f87ecd6b-a5cc-412a-a304-67b071acd152)
+
+* After I had gone over my learning materials in the python essenials and googling how to   
+  use Input validation for checking users input, I had added some code usuing ".isdigit()" which takes the users input and checks if its a digit. If the input from the user is not a digit the while loop will not run and ask user to re-enter.
+
+  ![Bug-pic2](https://github.com/user-attachments/assets/85faee34-5534-4845-beca-a91355237954)
+
 
 
 
