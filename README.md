@@ -113,9 +113,26 @@ The vending machine game gets its roots from the famous video game franchise Fal
     * To create a logic flowchart of the hangman game.
 * [Heroku]()
     * To deploy the project.
-* [CI Python Linter]()
-    * Check code for any issues.
 
 ## Testing 
 
 CI Python Linter was used to test run.py.
+
+## Manual Testing
+
+The game was manually tested extensively using gitpod terminal, and once the website was deployed on Heroku it was manually tested again, during the creation of the code to the end. Testing of Game rules/instructions, bottlecap input validation, select lines to play input validation, how many bottlecaps deposited on each line, display vending machine and finally infrom user if they've won on any lines, how many bottlecaps won, updated balance at the end..
+
+
+
+| Feature | Expected Result | Steps Taken | Actual Result |
+| ------- | -------------- | ----------- | ------------- |
+| Intro Screen   | To display welcome message to user | None | As Expected |
+| Display Rules | To display rules to user below intro message | None| As Expected | 
+| Enter bottlecap deposit to play | To aquire bottlecap deposit from user| Input integer value from 1-100| As Expected |
+| How many lines do you want to play on | Ask user how many lines do they wish to play on| User enters how many lines to play on (1-3) | As Expected |
+| Choose how many bottlecaps to deposit on chosen lines | Retrieve bottlecap balance and deposit on chosen lines | Deposit bottlecap balance across lines | As Expected | ![Difficulty]
+| Display users deposit and lines to play  | Informs user of deposit made to play game | none | As Expected |
+| Display game | Display vending machine with random lines generated | Display 3 lines with random symbols attached | As Expected |
+| Winning line | Achiveing 3 matching symbols across chosen line, multiplying players deposit and displaying tokens won/ line won on with updated balance shown. | 3 matching symbols across chosen line | As Expected | 
+| Losing line | Not achiving 3 matching symbols across chosen line, players deposit lost updating players balance. | Displaying user balance after losing bottlecaps when playing | As Expected | 
+| Play again | When users balance reaches less than 1 the game will end and the user will be asked to start again, however if the users deposit is > 1 but wants to quit, user can eneter q. | Game terminates when balance is less than 1 or user enters q to terminal | As Expected | 
