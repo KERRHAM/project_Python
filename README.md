@@ -136,3 +136,42 @@ The game was manually tested extensively using gitpod terminal, and once the web
 | Winning line | Achiveing 3 matching symbols across chosen line, multiplying players deposit and displaying tokens won/ line won on with updated balance shown. | 3 matching symbols across chosen line | As Expected | 
 | Losing line | Not achiving 3 matching symbols across chosen line, players deposit lost updating players balance. | Displaying user balance after losing bottlecaps when playing | As Expected | 
 | Play again | When users balance reaches less than 1 the game will end and the user will be asked to start again, however if the users deposit is > 1 but wants to quit, user can eneter q. | Game terminates when balance is less than 1 or user enters q to terminal | As Expected | 
+
+## Input validation testing
+
+* Enter deposit of bottlecaps
+    * Cannot continue with empty input
+    * Must be an integer value from 1-100
+    * Cannot contine with string values
+
+![start deposit](https://github.com/user-attachments/assets/5535827f-9caa-488b-b352-32c628960fd9)
+
+
+
+* Enter number of lines to play on.
+    * Input cannot be empty
+    * Input must be integers
+    * Input cannot contain special characters
+    * Input cannot be string vales
+
+![Number of lines](https://github.com/user-attachments/assets/1a31fec0-2d52-41ba-9070-994f2b4c721b)
+
+
+* Select how many bottlecaps to be deposited on lines chosen
+    * Cannot continue with empty input
+    * Must be equal to or less than balance
+    * Must be a integer value
+    * Cannot be string value
+
+![lines deposit](https://github.com/user-attachments/assets/13b8bf2e-0887-4841-a611-ca82c6787ffd)
+
+
+
+
+* Play again/End
+    * User can click enter button to play again.
+    * Game will terminate if user enters "q" or balance is less than 1.
+
+![End](https://github.com/user-attachments/assets/d088914e-dab6-4d66-bd62-500bd3d6af14)
+
+
